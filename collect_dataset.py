@@ -42,6 +42,7 @@ def main(args):
     model.eval()
 
     # === Set the dataset paths ===
+    args.watermarker = "Rosteals"
     dataset_input_path = os.path.join(
         args.clean_data_root, args.dataset_name
     )
@@ -135,7 +136,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--clean_data_root', type=str, help="Root dir where the clean image dataset is located.",
-        default=os.path.join("..", "..", "DIP_Watermark_Evasion", "dataset", "Clean")
+        default=os.path.join("dataset", "Clean")
     )
     parser.add_argument(
         "--dataset_name", dest="dataset_name", type=str, help="The dataset name: [COCO, DiffusionDB]",
