@@ -1,0 +1,1 @@
+python collect_decode_clean.py --dataset DiffusionDB
